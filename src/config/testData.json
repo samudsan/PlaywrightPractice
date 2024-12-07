@@ -1,0 +1,21 @@
+{
+    "users": {
+      "validUser": {
+        "username": "standard_user",
+        "password": "secret_sauce"
+      },
+      "invalidUser": {
+        "username": "standard_user1",
+        "password": "secret_sauce1"
+      }
+    },
+    "cart": {
+      "expectedItemCount": 3
+    },
+    "urls": {
+      "homePage": "/",
+      "loginPage": "/login",
+      "checkoutPage": "/checkout"
+    }
+  }
+  

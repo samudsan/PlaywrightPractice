@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",                  // Use the latest JavaScript features
+      "module": "CommonJS",               // Node.js-compatible module system
+      "strict": true,                     // Enable strict type-checking
+      "esModuleInterop": true,            // Support import/export syntax
+      "moduleResolution": "node",         // Resolve modules like Node.js
+      "outDir": "./dist",                 // Output folder for compiled JS
+      "rootDir": "./src",                 // Root folder for source files
+      "resolveJsonModule": true,          // Allow importing JSON files
+      "skipLibCheck": true                // Skip type checks for dependencies
+    },
+    "include": ["src/**/*"],              // Include all source files in `src`
+    "exclude": ["node_modules", "dist"]   // Exclude unnecessary files
+  }
+  
