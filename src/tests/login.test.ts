@@ -4,6 +4,19 @@ import { TestDataManager } from '../utils/testDataManager';
 
 const testData = TestDataManager.readJSON('./src/config/testData.json');
 
+   // Enable tracing before each test
+   test.beforeEach(async ({ page }) => {
+    await page.context().tracing.start({
+      screenshots: true,
+      snapshots: true,
+    });
+  });
+
+  // Stop tracing and save the trace after each test
+  test.afterEach(async ({ page }) => {
+    await page.context().tracing.stop({ path: 'trace.zip' });
+  });
+
 test.describe('Login Page Tests', () => {
   test('Login with valid credentials', async ({ page }) => {
     const loginPage = new LoginPage(page);
