@@ -11,7 +11,7 @@ test.describe('Checkout Page Tests', () => {
 
   test('Proceed to checkout', async ({ page }) => {
     const checkoutPage = new CheckoutPage(page);
-    await checkoutPage.navigateTo('/checkout');
+    await checkoutPage.navigateTo('checkout');
     await checkoutPage.proceedToCheckout();
     expect(page.url()).toBe('https://www.saucedemo.com/inventory.html');
   });
